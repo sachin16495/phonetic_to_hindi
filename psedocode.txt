@@ -1,0 +1,88 @@
+
+
+Input adgency list of a graph as adj_list
+
+
+ 
+function tropogrphical_sort(startpoint,ending)
+{
+	declare low, high;
+	declare pivotK0, pivotK1, pivotK2;
+	low=st;
+	high=end;
+ 
+	if(st>=end)
+		return;
+ 	#declare pivot elements
+	pivotK0=adj_list[low][0]
+	pivotK1=adj_list[low][1]
+	pivotK2=adj_list[low][2]
+	
+	while(low is less than high)
+	{
+		while(low is less than high and adj_list[high][2] is less than or equal to pivotK2)
+		{
+			increment high by 1
+		}
+		adj_list[low][0]=adj_list[high][0];
+		adj_list[low][1]=adj_list[high][1];
+		adj_list[low][2]=adj_list[high][2];
+ 
+		while(low is less than high && adj_list[low][2] is greater than or equal to pivotK2)
+		{
+			increment low by 1
+		}
+		adj_list[high][0]=adj_list[low][0];
+		adj_list[high][1]=adj_list[low][1];
+		adj_list[high][2]=adj_list[low][2];
+	}
+	adj_list[low][0]=pivotK0;
+	adj_list[low][1]=pivotK1;
+	adj_list[low][2]=pivotK2;
+ 
+	tropogrphical__sort(st,low-1);
+	tropogrphical__sort(high+1,end);
+}
+ 
+function sort()
+{
+tropogrphical_sort(0,0);	
+ label[Maxvertex][Maxvertex]
+ 
+	
+	while i in graph edges 
+	{
+		if(group[adj_list[i][0]]!=group[adj_list[i][1]])
+		{
+			u=group[adj_list[i][0]] is less than group[adj_list[i][1]] then group[adj_list[i][0]] else group[adj_list[i][1]];
+			v=group[adj_list[i][0]] is greater than group[adj_list[i][1]] then group[adj_list[i][0]]  else group[adj_list[i][1]];
+			
+			while label[u][v] is  not equal to -1	
+
+			{
+				while label[v][u] is not equal to -1
+				{
+					results[label[u][m]][label[v][n]]=input[i][2];
+					results[label[v][n]][label[u][m]]=input[i][2];
+				}
+			}
+			while label[v][n]! is not equal to -1;
+			{
+				label[u][m]=label[v][n];
+				group[label[v][n]]=group[label[u][0]];
+			}
+		}
+	}
+ 
+	while h is less than V
+	{
+
+		while p is not less than v 
+			output result[i][p]
+			increment p and h
+			
+	}
+
+}    
+
+output graph 
