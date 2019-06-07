@@ -11,7 +11,7 @@ function tropogrphical_sort(startpoint,ending)
 	low=st;
 	high=end;
  
-	if(st>=end)
+	if st is greater than end
 		return;
  	#declare pivot elements
 	pivotK0=adj_list[low][0]
